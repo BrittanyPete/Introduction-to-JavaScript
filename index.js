@@ -94,7 +94,7 @@ Do the following:
 function dogYears(humanAge){
   return humanAge * 7;
 }
-console.log('Task 2:', dogYears(7));
+console.log('Task 2:', dogYears(22));
 
 
 
@@ -167,11 +167,31 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+let computer = Math.random();
 
-function game(user, computer){
-  /*add your code here*/
+if (computer <= 0.33){
+  computer = 'rock'
+}else if(computer <=0.67){
+  computer = 'paper'
+}else if(computer > 0.67){
+  computer = 'rock'
 }
 
+function game(user, computer){
+  if (user === computer){
+    return "it's a tie";
+  } else if (user === 'paper' && computer === 'rock'){
+    return "you win!"
+  } else if (user === 'scissors' && computer === 'paper'){
+    return "you win!"
+  } else if (user === 'rock' && computer === 'scissors'){
+    return "you win!"
+  } else {
+    return "you lose!"
+  }
+}
+
+console.log(game('rock', computer))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -185,10 +205,10 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
-}
-
+function miles(kilometers){
+ return kilometers * 0.621371;
+ }
+console.log('Task 5a:', miles(7));
 
 
 //Task 5b - Feet to CM
