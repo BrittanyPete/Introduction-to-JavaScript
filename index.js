@@ -285,10 +285,20 @@ HINT - you may need to study tomorrow's content on arrays
 HINT - try looking up the .includes() method
 */
 
-
-function vowelCounter(/*add your code here*/) {
-  /*add your code here*/
+function vowelCounter(string) {
+  let vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+  let count = 0;
+ 
+  for(let v of string){
+    if(vowels.includes(v)){
+      // console.log(v);
+      count = count+1;
+    }
+  }
+  return count;
 }
+
+console.log('There are', vowelCounter('I need some hElp with JavAscript'), 'vowels in this string.');
 
 
 
