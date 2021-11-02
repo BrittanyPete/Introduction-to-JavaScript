@@ -1,5 +1,7 @@
 /*🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️ Task 1: Warm-up! 🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️*/
 
+const { numberLiteralTypeAnnotation } = require("@babel/types");
+
 /*MAKE SURE TO RETURN ALL OF THE ANSWERS INSIDE OF A FUNCTION (tasks 1d through task 7), IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
 
 // task 1a, 1b, and 1c are not autograded
@@ -19,7 +21,12 @@ Do the following:
 
    HINT: no function required
 */
-
+let votingAge = 21;
+if (votingAge >= 18) {
+  console.log('Task 1a:', true);
+} else {
+  console.log('Task 1a:', false);
+}
 
 
 /*
@@ -32,9 +39,15 @@ Do the following:
 
    HINT: no function required
 */
+let name = 'Ace';
+let breakfast = 'pancakes';
 
-
-
+if(breakfast === 'pancakes'){
+  name = 'Zeke';
+} else {
+  name = 'Ace';
+}
+console.log('Task 1b:', name);
 
 
 /*
@@ -48,8 +61,9 @@ Do the following:
    HINT: look up the Number method
 */
 
+const string1 = '1999';
 
-
+console.log('Task 1c:', Number(string1));
 
 /*
 Task 1d - Multiply
@@ -60,9 +74,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a, b){
+  return a * b;
 }
+console.log('Task 1d:', multiply(4, 3));
 
 
 
@@ -76,9 +91,10 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(humanAge){
+  return humanAge * 7;
 }
+console.log('Task 2:', dogYears(7));
 
 
 
